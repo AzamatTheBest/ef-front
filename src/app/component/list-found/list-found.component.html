@@ -1,0 +1,7 @@
+<input type="text" type="text" class="form-control" aria-label="Sizing example input" placeholder="Filter..." [(ngModel)]="term"/>
+
+
+<div class="main-block" *ngIf="found$ | async as found">
+  <app-foundation *ngFor="let fou of found | filterFound: term; let i = index"
+             [foundation]="fou"></app-foundation>
+</div>

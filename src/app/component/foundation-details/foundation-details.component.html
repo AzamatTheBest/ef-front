@@ -1,0 +1,26 @@
+<body style="background-color: aliceblue;">
+    <div class="styleImage">
+        <img [src]="found.image" [alt]="found.name">
+        
+    </div>
+    <h1>{{found.name}}</h1>
+    <h2>{{found.country}}</h2>
+    <h2>{{found.address}}</h2>
+    
+    <h2 style="margin-top: 10%;">О школе</h2>
+    <h3>{{found.description}}</h3>
+    
+    <h1 style="margin-top: 10%; margin-bottom: 5%;">Курсы</h1>
+    <div class="blockk" style="margin-bottom: 20%;">
+        <div class="card" style="width: 30rem;" *ngFor="let courses of found.found_course">
+            <div class="card-body">
+              <h3 style="margin-bottom: 15%;" class="card-title">{{ courses.title }}</h3>
+              <h5 class="card-title">{{ courses.description }}</h5>
+              <a href="/course/{{courses.id}}" class="btn btn-primary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img style="width: 200px; height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/EF_Education_First_Logo.png/200px-EF_Education_First_Logo.png"/>
+    </footer>
+</body>

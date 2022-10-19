@@ -1,0 +1,11 @@
+<div class="form-div">
+    <form [formGroup] = "form" (submit)="submit()">
+        <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
+        <input formControlName="first_name" class="form-control" placeholder="Имя" required>
+        <input formControlName="last_name" class="form-control" placeholder="Фамилия" required>
+        <input type="email" formControlName="email"  class="form-control" placeholder="Почта" required>
+        <input type="password" formControlName="password" class="form-control" placeholder="пароль" required>
+        <button class="w-80 btn btn-lg btn-success" type="submit">Submit</button>
+    </form>
+</div>
+
